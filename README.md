@@ -58,20 +58,15 @@ The simulation will generate several output files:
 
 ## Key Equations
 
-- **Electron Conduction**:
-```
-sigma * d^2phi/dx^2 = -F * RC(phi, phi_li, c_o2, eps)
-```
+- **Electron Conduction**:\
+$$\sigma \frac{d^2 \phi}{dx^2} = -F \cdot RC(\phi, \phi_{li}, c_{o2}, \epsilon)$$
 
-- **Lithium Conductivity**:
-```
-kappa * d^2phi_li/dx^2 - kappa_d * d^2ln(c_li)/dx^2 = F * (RC - RA)
-```
+- **Lithium Conductivity**:\
+$$\kappa \frac{d^2 \phi_{li}}{dx^2} - \kappa_d \frac{d^2 \ln(c_{li})}{dx^2} = F \cdot (RC - RA)$$
 
-- **Lithium and Oxygen Diffusion**:
-  Uses Fick's second law with reaction terms for lithium and oxygen.
+- **Lithium and Oxygen Diffusion**: Uses Fick's second law with reaction terms for lithium and oxygen.\
+$$\frac{\partial c_{Li}}{\partial t} = \epsilon \frac{\partial c_{Li}}{\partial t} + D_{Li} \frac{\partial^2 c_{Li}}{\partial x^2} + (1 - t_{+}) \cdot RC(\phi, \phi_{li}, c_{o2}, \epsilon)$$\
+$$\frac{\partial c_{O2}}{\partial t} = \epsilon \frac{\partial c_{O2}}{\partial t} + D_{O2} \frac{\partial^2 c_{O2}}{\partial x^2} + \frac{RC(\phi, \phi_{li}, c_{o2}, \epsilon)}{2}$$
   
-- **Porosity Change**:
-```
-d(eps)/dt = - (M_li2o2 / 2 * rho_li2o2) * RC
-```
+- **Porosity Change**:\
+$$\frac{d\epsilon}{dt} = - \left(\frac{M_{Li_2O_2}}{2 \rho_{Li_2O_2}}\right) RC$$
