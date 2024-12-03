@@ -18,8 +18,8 @@ Before running this simulation, ensure you have:
 
 ## Installation
 
-Clone the Repository.
-Compile the Program: Use a C++ compiler to compile `main.cpp`. For example:
+- Clone the Repository.
+- Use a C++ compiler to compile `main.cpp`. For example:
 ```sh
 g++ -o simulate_battery main.cpp
 ```
