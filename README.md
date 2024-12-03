@@ -27,7 +27,9 @@ g++ -o simulate_battery main.cpp
 ## Usage
 
 To run the simulation:
+```
 ./simulate_battery
+```
 
 ## Output Files
 
